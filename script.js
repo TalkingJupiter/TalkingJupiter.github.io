@@ -1,40 +1,27 @@
+// Fade in elements on scroll
+const faders = document.querySelectorAll(".fade-in");
 
-var tablinks = document.getElementsByClassName('tab-links');
-var tabcontents = document.getElementsByClassName('tab-contents');
-var sidemenu = document.getElementsByClassName('sidemenu');
+const appearOptions = {
+  threshold: 0.3,
+};
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove('active-link');
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove('active-tab');
-    }
-    event.currentTarget.classList.add('active-link');
-    document.getElementById(tabname).classList.add('active-tab');
-}
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
 
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
 
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+// Always reset scroll to top on page load
+window.history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-
-}
-
-// Responsive side navbar
-
-function openmenu(){
-    sidemenu.style.right = '0';
-}
-function closemenu(){
-    sidemenu.style.right = '-200px';
+// Clear any lingering anchor like #contact from URL
+if (window.location.hash) {
+  window.history.replaceState(null, null, window.location.pathname);
 }
