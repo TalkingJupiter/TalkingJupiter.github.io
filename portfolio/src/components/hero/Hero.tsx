@@ -50,7 +50,7 @@ export default function Hero() {
             <div className="relative">
               <div className="relative h-[420px] w-[330px] overflow-hidden rounded-[28px] bg-[#6f78ff]/60 shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:h-[460px] sm:w-[360px]">
                 <Image
-                  src="/me.jpg"
+                  src="/me.JPG"
                   alt="Portrait"
                   fill
                   priority
