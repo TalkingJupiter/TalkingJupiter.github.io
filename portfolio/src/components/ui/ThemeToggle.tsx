@@ -2,37 +2,44 @@
 
 import { useEffect, useState } from "react";
 
-export default function ThemeToggle() {
-  const [dark, setDark] = useState(true);
+type Theme = "dark" | "light";
 
-  // Apply theme to <html>
+export default function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  // Load saved theme on first mount
+  useEffect(() => {
+    const saved = (localStorage.getItem("theme") as Theme | null) ?? null;
+    const initial: Theme = saved ?? "dark";
+    setTheme(initial);
+  }, []);
+
+  // Apply theme to <html> whenever theme changes
   useEffect(() => {
     const root = document.documentElement;
-    if (dark) {
+
+    if (theme === "dark") {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [dark]);
+  }, [theme]);
 
-  // Load saved theme
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light") setDark(false);
-  }, []);
+  const isDark = theme === "dark";
 
   return (
     <button
-      onClick={() => setDark(!dark)}
-      className={`relative h-7 w-12 rounded-full p-1 transition-colors
-        ${dark ? "bg-[#b7ff5a]" : "bg-neutral-300"}`}
+      type="button"
       aria-label="Toggle theme"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={`relative h-7 w-12 rounded-full p-1 transition-colors
+        ${isDark ? "bg-[#b7ff5a]/90" : "bg-[#d7d7d7]"}`}
     >
       <span
         className={`block h-5 w-5 rounded-full transition-transform
-          ${dark ? "translate-x-5 bg-black" : "translate-x-0 bg-white"}`}
+          ${isDark ? "translate-x-5 bg-black/90" : "translate-x-0 bg-white"}`}
       />
     </button>
   );
