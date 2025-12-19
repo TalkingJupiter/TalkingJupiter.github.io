@@ -99,9 +99,9 @@ export default function Hero() {
         </div>
 
         {/* Theme toggle */}
-        <div className="mt-2 flex justify-center">
+        {/* <div className="mt-2 flex justify-center">
           <ThemeToggle />
-        </div>
+        </div> */}
       </main>
     </div>
   );
