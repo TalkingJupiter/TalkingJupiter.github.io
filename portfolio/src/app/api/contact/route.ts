@@ -1,8 +1,14 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
+export function GET() {
+  return new Response(
+    JSON.stringify({ ok: true, hint: "Use POST /api/contact" }),
+    { status: 200, headers: { "Content-Type": "application/json" } }
+  );
+}
 export async function POST(req: Request) {
+  console.log("POST /api/contact hit");
   try {
     const { name, email, message } = await req.json();
 

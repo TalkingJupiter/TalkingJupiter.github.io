@@ -31,7 +31,7 @@ export default function AnimatedLanesBackground() {
 
       {/* Grain (optional) */}
       {/* Remove this line if you don’t have /public/noise.png */}
-      <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay dark:opacity-[0.06] bg-[url('/noise.png')] bg-repeat" />
+      {/* <div className="absolute inset-0 opacity-[0.08] mix-blend-overlay dark:opacity-[0.06] bg-[url('/noise.png')] bg-repeat" /> */}
     </div>
   );
 }
