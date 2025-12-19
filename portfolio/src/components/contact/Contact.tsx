@@ -13,7 +13,7 @@ export default function Contact() {
           <div className="relative">
             <div className="relative h-[420px] w-[320px] overflow-hidden rounded-[28px] bg-[#6f78ff]/60 shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
               <Image
-                src="/me.jpg"
+                src="/me.JPG"
                 alt="Portrait"
                 fill
                 className="object-cover object-center"
