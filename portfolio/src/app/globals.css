@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: var(--font-antonio);
+  --font-body: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
