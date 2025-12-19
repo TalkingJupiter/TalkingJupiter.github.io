@@ -41,7 +41,7 @@ export default function Hero() {
             <div className="relative">
               <div className="relative h-[420px] w-[330px] overflow-hidden rounded-[28px] bg-[#6f78ff]/60 shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:h-[460px] sm:w-[360px]">
                 <Image
-                  src="/me.jpg"
+                  src="/me.JPG"
                   alt="Portrait"
                   fill
                   priority
@@ -77,7 +77,7 @@ export default function Hero() {
                 Assistant
               </div>
               <div className="mt-3 max-w-[260px] text-right text-xs text-[#5a5a5a] dark:text-white/70">
-                I’m a US-based research assistant and an undergrad student
+                I'm a US-based research assistant and an undergrad student
               </div>
             </div>
           </div>
