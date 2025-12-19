@@ -5,13 +5,13 @@ import { antonio, inter } from "@/lib/fonts";
 export default function Hero() {
   return (
     <div
-      className={`${inter.className} min-h-screen w-full bg-[#f2f2f2] text-[#2b2b2b] dark:bg-[#2f2f2f] dark:text-white`}
+      className={`${inter.className} min-h-screen w-full text-[#2b2b2b] dark:text-white`}
     >
       {/* Top nav */}
       <header className="w-full pt-8">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-center px-6">
           <nav className="flex items-center gap-6 rounded-full bg-[#fafafa] px-4 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/10 dark:bg-[#141414] dark:ring-white/10">
-            <div className="h-6 w-6 rounded-full bg-black/20 dark:bg-white/80" />
+            {/* <div className="h-6 w-6 rounded-full bg-black/20 dark:bg-white/80" /> */}
 
             <a
               className="text-sm text-[#3a3a3a] hover:text-black dark:text-white/90 dark:hover:text-white"

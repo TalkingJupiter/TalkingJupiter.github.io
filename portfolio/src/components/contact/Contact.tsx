@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className={`${inter.className} w-full bg-[#f2f2f2] text-[#2b2b2b] dark:bg-[#2f2f2f] dark:text-white`}
+      className={`${inter.className} w-full text-[#2b2b2b] dark:text-white`}
     >
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-start">

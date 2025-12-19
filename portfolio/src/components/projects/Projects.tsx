@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className={`${inter.className} min-h-screen w-full bg-[#f2f2f2] text-[#2b2b2b] dark:bg-[#2f2f2f] dark:text-white`}
+      className={`${inter.className} min-h-screen w-full text-[#2b2b2b] dark:text-white`}
     >
       <div className="mx-auto max-w-6xl px-6 py-20">
         {/* Section header */}

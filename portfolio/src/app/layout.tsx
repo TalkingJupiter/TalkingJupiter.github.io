@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Antonio, Inter } from "next/font/google";
+import AnimatedLanesBackground from "@/components/ui/AnimatedLanesBackground";
 
 const antonio = Antonio({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${antonio.variable} ${inter.variable}`}>
       <body>
+        <AnimatedLanesBackground />
         {children}
         <Analytics />
       </body>
