@@ -21,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${antonio.variable} ${inter.variable}`}>
-      <body>{children}
+      <body>
+        {children}
         <Analytics />
       </body>
     </html>
