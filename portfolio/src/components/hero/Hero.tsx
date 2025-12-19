@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ThemeToggle from "@/components/ui/ThemeToggle";
+// import ThemeToggle from "@/components/ui/ThemeToggle";
 import { antonio, inter } from "@/lib/fonts";
 
 export default function Hero() {
