@@ -13,101 +13,101 @@ html {
   scroll-behavior: smooth;
 }
 /* --- Elegant animated purple lanes --- */
+/* --- Truly seamless purple lanes (no jump) --- */
 .lane {
   position: absolute;
-  top: -40%;
-  left: -60%;
-  width: 220%;
-  height: 120%;
+  inset: -40%;
   transform: rotate(-18deg);
   filter: blur(18px);
-  opacity: 0.45;
-  will-change: transform;
-  animation: lane-drift 14s linear infinite;
-}
 
-/* Softer in light mode, stronger in dark mode */
-:root .lane {
-  opacity: 0.22;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  will-change: background-position;
+  animation: lane-scroll var(--dur, 24s) linear infinite;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  opacity: 0.42;
 }
-.dark .lane {
-  opacity: 0.48;
+:root .lane { opacity: 0.18; }
+.dark .lane { opacity: 0.42; }
+
+/* Key: move exactly ONE tile width, so frame 0 == frame 100 */
+@keyframes lane-scroll {
+  from { background-position: 0 0; }
+  to   { background-position: calc(-1 * var(--tile)) 0; }
 }
 
 .lane-1 {
-  background: linear-gradient(
+  --tile: 1400px;
+  --dur: 22s;
+  background-size: var(--tile) 100%;
+  background-image: repeating-linear-gradient(
     90deg,
-    transparent 0%,
-    rgba(132, 56, 255, 0.00) 18%,
-    rgba(132, 56, 255, 0.35) 42%,
-    rgba(180, 120, 255, 0.18) 55%,
-    rgba(132, 56, 255, 0.00) 75%,
-    transparent 100%
+    transparent 0px,
+    transparent 220px,
+    rgba(140, 70, 255, 0.35) 260px,
+    rgba(200, 160, 255, 0.18) 320px,
+    transparent 380px,
+    transparent 640px
   );
-  animation-duration: 16s;
 }
 
 .lane-2 {
-  top: -25%;
+  --tile: 1800px;
+  --dur: 28s;
+  top: -30%;
   filter: blur(22px);
-  background: linear-gradient(
+  background-size: var(--tile) 100%;
+  background-image: repeating-linear-gradient(
     90deg,
-    transparent 0%,
-    rgba(108, 70, 255, 0.00) 25%,
-    rgba(108, 70, 255, 0.28) 46%,
-    rgba(170, 130, 255, 0.14) 60%,
-    rgba(108, 70, 255, 0.00) 78%,
-    transparent 100%
+    transparent 0px,
+    transparent 260px,
+    rgba(110, 80, 255, 0.28) 300px,
+    rgba(190, 150, 255, 0.12) 360px,
+    transparent 420px,
+    transparent 760px
   );
-  animation-duration: 20s;
-  animation-delay: -7s;
+  animation-direction: reverse;
 }
 
 .lane-3 {
+  --tile: 2200px;
+  --dur: 34s;
   top: -55%;
   filter: blur(26px);
-  background: linear-gradient(
+  background-size: var(--tile) 100%;
+  background-image: repeating-linear-gradient(
     90deg,
-    transparent 0%,
-    rgba(160, 80, 255, 0.00) 20%,
-    rgba(160, 80, 255, 0.22) 40%,
-    rgba(210, 160, 255, 0.10) 58%,
-    rgba(160, 80, 255, 0.00) 80%,
-    transparent 100%
+    transparent 0px,
+    transparent 240px,
+    rgba(165, 90, 255, 0.22) 290px,
+    rgba(210, 170, 255, 0.10) 360px,
+    transparent 430px,
+    transparent 820px
   );
-  animation-duration: 24s;
-  animation-delay: -12s;
 }
 
 .lane-4 {
+  --tile: 1600px;
+  --dur: 16s;
   top: -10%;
-  height: 40%;
+  height: 60%;
   filter: blur(10px);
-  opacity: 0.18;
-  background: linear-gradient(
+  background-size: var(--tile) 100%;
+  background-image: repeating-linear-gradient(
     90deg,
-    transparent 0%,
-    rgba(210, 180, 255, 0.00) 35%,
-    rgba(210, 180, 255, 0.28) 50%,
-    rgba(210, 180, 255, 0.00) 65%,
-    transparent 100%
+    transparent 0px,
+    transparent 320px,
+    rgba(220, 190, 255, 0.28) 360px,
+    transparent 410px,
+    transparent 980px
   );
-  animation-duration: 12s;
-  animation-delay: -3s;
+  animation-direction: reverse;
+  opacity: 0.16;
 }
 
-@keyframes lane-drift {
-  0% {
-    transform: rotate(-18deg) translateX(-12%);
-  }
-  100% {
-    transform: rotate(-18deg) translateX(12%);
-  }
-}
-
-/* Accessibility: respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .lane {
-    animation: none;
-  }
+  .lane { animation: none; }
 }
