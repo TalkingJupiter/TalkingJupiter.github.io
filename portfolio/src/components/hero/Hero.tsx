@@ -73,7 +73,7 @@ export default function Hero() {
 
           {/* LEFT TEXT — NAME + RESEARCH (UPPER) */}
           <div className="absolute left-0 top-[38%] -translate-y-1/2 z-20">
-            <div className="mb-3 text-xs tracking-[0.35em] text-[#5a5a5a] dark:text-white/70">
+            <div className="mb-3 text-xs tracking-[0.35em] text-[#5a5a5a] text-white/70">
               BATUHAN SENCER
             </div>
             <div
@@ -91,7 +91,7 @@ export default function Hero() {
               >
                 Assistant
               </div>
-              <div className="mt-3 max-w-[260px] text-right text-xs text-[#5a5a5a] dark:text-white/70">
+              <div className="mt-3 max-w-[260px] text-right text-xs text-[#5a5a5a] text-white/70">
                 I'm a US-based research assistant and an undergrad student
               </div>
             </div>
