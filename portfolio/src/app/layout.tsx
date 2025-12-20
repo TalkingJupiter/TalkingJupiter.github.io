@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import { Antonio, Inter } from "next/font/google";
 import AnimatedLanesBackground from "@/components/ui/AnimatedLanesBackground";
 
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${antonio.variable} ${inter.variable}`}>
-      <body>
+    <html lang="en" className={`dark ${antonio.variable} ${inter.variable}`}>
+      <body className="bg-[#2f2f2f] text-white">
         <AnimatedLanesBackground />
         {children}
         <Analytics />
