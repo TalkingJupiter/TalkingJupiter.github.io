@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata = {
   title: "Batuhan Sencer | Research Assistant & CS Student",
   verification: {
-    google: "NKzBKxUmxxJN5G6mQTU_qBwD8EFiEub0oXnRqJiIRNpg",
+    google: "NKzBKxUmxJN5G6mQTU_qBwD8EFiEub0oXnRqJiIRNpg",
   },
 };
 
