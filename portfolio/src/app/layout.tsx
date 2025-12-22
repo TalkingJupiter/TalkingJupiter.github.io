@@ -15,6 +15,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+export const metadata = {
+  title: "Batuhan Sencer | Research Assistant & CS Student",
+  verification: {
+    google: "NKzBKxUmxxJN5G6mQTU_qBwD8EFiEub0oXnRqJiIRNpg",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
