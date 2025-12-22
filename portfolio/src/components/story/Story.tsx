@@ -116,7 +116,7 @@ export default function Story() {
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  <Tag>C#</Tag>
+                  <Tag>C++</Tag>
                   <Tag>Radxa X4</Tag>
                   <Tag>I2C</Tag>
                   <Tag>Network</Tag>

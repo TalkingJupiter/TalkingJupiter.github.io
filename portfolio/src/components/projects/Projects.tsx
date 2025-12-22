@@ -28,9 +28,16 @@ export default function Projects() {
           <ProjectCard
             tag="Research"
             title="KNOWLEDGE DISTILLATION ON LLMS"
-            description="Designed and ran knowledge distillation experiments for large language models, analyzing performance–efficiency trade-offs between teacher and student models."
+            description="Designed and ran knowledge distillation experiments for large language models, analyzing performance-efficiency trade-offs between teacher and student models."
             image="/projects/kd.jpg"
             githubUrl="https://github.com/TalkingJupiter/Energy-Aware-Knowledge-Distillation"
+          />
+          <ProjectCard
+            tag="Research / Operations"
+            title="Reliable Managment of REPACSS Cluster"
+            description="End-to-end cluster management through a custom, externally deployed monitoring and validation system."
+            image="/projects/reliable.jpg"
+            githubUrl="https://github.com/TalkingJupiter/RRMRC"
           />
         </div>
       </div>
