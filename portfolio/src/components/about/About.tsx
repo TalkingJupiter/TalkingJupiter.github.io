@@ -1,4 +1,6 @@
 import { antonio, inter } from "@/lib/fonts";
+import Link from "next/link";
+
 
 export default function About() {
   return (
@@ -16,7 +18,7 @@ export default function About() {
 
         {/* Description */}
         <p className="mt-4 max-w-xl text-sm text-[#5a5a5a] dark:text-white/80">
-          Hi, I’m Batuhan, a research assistant and undergraduate–master’s
+          Hi, I'm Batuhan, a research assistant and undergraduate-master's
           student with a strong passion for my work.
         </p>
 
@@ -36,9 +38,12 @@ export default function About() {
         </div>
 
         {/* CTA */}
-        <button className="mt-6 rounded-full border border-[#b7ff5a] px-8 py-2 text-sm font-semibold text-[#6aa800] transition hover:bg-[#b7ff5a] hover:text-black dark:text-[#b7ff5a]">
+        <Link
+          href="/story"
+          className="mt-6 inline-flex rounded-full border border-[#b7ff5a] px-8 py-2 text-sm font-semibold text-[#6aa800] transition hover:bg-[#b7ff5a] hover:text-black dark:text-[#b7ff5a]"
+        >
           MY STORY
-        </button>
+        </Link>
       </div>
     </section>
   );
