@@ -2,6 +2,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Antonio, Inter } from "next/font/google";
 import AnimatedLanesBackground from "@/components/ui/AnimatedLanesBackground";
+import Snoopy from "@/components/snoopy/WavingCorner"
 
 const antonio = Antonio({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="bg-[#2f2f2f] text-white">
         <AnimatedLanesBackground />
         {children}
+        <Snoopy />
         <Analytics />
       </body>
     </html>

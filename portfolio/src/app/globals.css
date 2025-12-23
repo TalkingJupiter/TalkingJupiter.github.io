@@ -115,6 +115,26 @@ html {
   opacity: 0.16;
 }
 
+.snoopy {
+  position: fixed;
+  left: 16px;
+  bottom: -5px;
+
+  width: 160px;
+
+  z-index: 2147483647;
+  pointer-events: none;
+}
+
+
+
 @media (prefers-reduced-motion: reduce) {
   .lane { animation: none; }
+}
+
+@media (max-width:640px){
+  .snoopy{
+    left: auto;
+    right: 16px
+  }
 }
