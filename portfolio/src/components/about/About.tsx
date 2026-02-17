@@ -24,8 +24,8 @@ export default function About() {
 
         {/* Stats */}
         <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
-          <Stat value="0.5" label="Years of Experience" />
-          <Stat value="2" label="On Going Projects" />
+          <Stat value="1" label="Year(s) of Research" />
+          <Stat value="3" label="On Going Research" />
           <Stat value="1" label="Completed Projects" />
         </div>
 
