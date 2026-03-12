@@ -145,8 +145,7 @@ export default function Contact() {
         <div className="mx-auto max-w-6xl px-6 py-6">
           <div className="flex items-center justify-between text-xs font-medium">
             <div>
-              <div>Email:</div>
-              <div className="font-semibold">batuhan.sencer@ttu.edu</div>
+
             </div>
 
             <div className="text-right">

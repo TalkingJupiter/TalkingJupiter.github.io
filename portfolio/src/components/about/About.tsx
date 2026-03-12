@@ -29,13 +29,7 @@ export default function About() {
           <Stat value="1" label="Completed Projects" />
         </div>
 
-        {/* Email */}
-        <div className="mt-10 text-sm">
-          <div className="font-medium">Email:</div>
-          <div className="text-[#5a5a5a] dark:text-white/50">
-            batuhan.sencer@ttu.edu
-          </div>
-        </div>
+        
 
         {/* CTA */}
         <Link
