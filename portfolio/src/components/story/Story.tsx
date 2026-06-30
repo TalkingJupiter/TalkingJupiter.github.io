@@ -137,8 +137,8 @@ export default function Story() {
                 real system evidence.
               </p>
             </div>
-          </div>
-          <div className="rounded-[28px] bg-[#b7ff5a]/15 p-8 ring-1 ring-[#b7ff5a]/40">
+
+            <div className="mt-10 rounded-[28px] bg-[#b7ff5a]/15 p-8 ring-1 ring-[#b7ff5a]/40">
               <div className={`${antonio.className} text-xl font-bold text-black dark:text-white`}>
                 “Real systems. Real measurements.”
               </div>
@@ -147,6 +147,7 @@ export default function Story() {
                 end-to-end system evidence.
               </p>
             </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
