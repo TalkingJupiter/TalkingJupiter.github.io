@@ -37,7 +37,7 @@ export default function Projects() {
             title="Reliable Managment of REPACSS Cluster"
             description="End-to-end cluster management through a custom, externally deployed monitoring and validation system."
             image="/projects/reliable.jpg"
-            githubUrl="https://github.com/TalkingJupiter/RRMRC"
+            githubUrl="https://github.com/nsfcac/ReliableRemoteManagement"
           />
         </div>
       </div>
