@@ -10,6 +10,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot, humans never see it
   const [status, setStatus] = useState<Status>("idle");
 
   async function onSubmit(e: React.FormEvent) {
@@ -22,7 +23,7 @@ export default function Contact() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, website }),
       });
 
       if (!res.ok) {
@@ -51,8 +52,9 @@ export default function Contact() {
             <div className="relative h-[420px] w-[320px] overflow-hidden rounded-[28px] bg-[#6f78ff]/60 shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
               <Image
                 src="/me.JPG"
-                alt="Portrait"
+                alt="Batuhan Sencer"
                 fill
+                sizes="320px"
                 className="object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#6f78ff]/25 via-transparent to-black/35" />
@@ -73,10 +75,21 @@ export default function Contact() {
             <h2
               className={`${antonio.className} text-5xl font-extrabold tracking-tight text-center lg:text-left`}
             >
-              LET'S CONNECT
+              LET&apos;S CONNECT
             </h2>
 
             <form className="mt-10 space-y-6" onSubmit={onSubmit}>
+              {/* Honeypot: hidden from people, bots tend to fill it */}
+              <input
+                type="text"
+                name="website"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute -left-[9999px] h-0 w-0 opacity-0"
+              />
               {/* Name / Email */}
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <Field label="Name">
@@ -144,20 +157,27 @@ export default function Contact() {
       <footer className="w-full bg-[#b7ff5a] text-black">
         <div className="mx-auto max-w-6xl px-6 py-6">
           <div className="flex items-center justify-between text-xs font-medium">
-            <div>
-
+            <div className={`${antonio.className} text-base font-bold`}>
+              BATUHAN SENCER
             </div>
 
-            <div className="text-right">
-              <div>Social:</div>
-              <div className="font-semibold">—</div>
+            <div className="flex items-center gap-4 font-semibold">
+              <a
+                href="https://github.com/TalkingJupiter"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                GitHub
+              </a>
+              {/* TODO: add LinkedIn / Google Scholar URLs */}
             </div>
           </div>
 
           <div className="mt-4 h-px w-full bg-black/25" />
 
           <div className="mt-4 text-center text-[11px] text-black/70">
-            Copyright 2025. All Rights Reserved by Batuhan Sencer
+            © {new Date().getFullYear()} Batuhan Sencer. All rights reserved.
           </div>
         </div>
       </footer>
@@ -173,11 +193,11 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <div className="mb-2 text-xs font-semibold text-[#6aa800] dark:text-[#b7ff5a]">
+    <label className="block">
+      <span className="mb-2 block text-xs font-semibold text-[#6aa800] dark:text-[#b7ff5a]">
         {label}
-      </div>
+      </span>
       {children}
-    </div>
+    </label>
   );
 }
