@@ -18,8 +18,8 @@ export default function About() {
 
         {/* Description */}
         <p className="mt-4 max-w-xl text-sm text-[#5a5a5a] dark:text-white/80">
-          Hi, I'm Batuhan, a research assistant and undergraduate-master's
-          student with a strong passion for my work.
+          Hi, I&apos;m Batuhan, a research assistant at Texas Tech and a
+          BS/MS Computer Science student with a strong passion for my work.
         </p>
 
         {/* Stats */}

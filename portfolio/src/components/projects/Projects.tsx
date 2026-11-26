@@ -34,7 +34,7 @@ export default function Projects() {
           />
           <ProjectCard
             tag="Research / Operations"
-            title="Reliable Managment of REPACSS Cluster"
+            title="Reliable Management of REPACSS Cluster"
             description="End-to-end cluster management through a custom, externally deployed monitoring and validation system."
             image="/projects/reliable.jpg"
             githubUrl="https://github.com/nsfcac/ReliableRemoteManagement"
@@ -73,7 +73,7 @@ function ProjectCard({
             src={image}
             alt={title}
             fill
-            priority
+            sizes="(max-width: 1152px) 100vw, 1104px"
             className="object-cover"
           />
         </div>

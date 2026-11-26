@@ -1,6 +1,5 @@
 import { antonio, inter } from "@/lib/fonts";
 import Link from "next/link";
-import { text } from "stream/consumers";
 
 
 export default function Story() {
@@ -19,8 +18,7 @@ export default function Story() {
               MY STORY
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-[#5a5a5a] dark:text-white/70">
-              A short, honest narrative — the kind recruiters actually read.
-              Research + systems + taste for clean design.
+              How I got here: research, systems, and a taste for clean design.
             </p>
           </div>
 
@@ -105,12 +103,12 @@ export default function Story() {
                 </div>
               </div>
               <div className="mt-10">
-                <h4 className={`${antonio.className} text-x1 font-bold`}>
-                  Side Project - Reliable Cluster Managment
+                <h4 className={`${antonio.className} text-xl font-bold`}>
+                  Side Project - Reliable Cluster Management
                 </h4>
                 <p className="mt-3 text-sm text-[#5a5a5a] dark:text-white/70">
                   Publishing robust results in reliable cluster management while designing, 
-                  esting, and deploying a custom monitoring system—demonstrating both research 
+                  testing, and deploying a custom monitoring system—demonstrating both research 
                   rigor and production-grade engineering through end-to-end system design, 
                   hardware-level coding with 20+ I²C devices, and full system deployment.
                 </p>
@@ -133,7 +131,7 @@ export default function Story() {
                 “Small models. Big measurements.”
               </div>
               <p className="mt-3 text-sm text-black/70 dark:text-white/70">
-                I'm most interested in work where performance claims come with
+                I&apos;m most interested in work where performance claims come with
                 real system evidence.
               </p>
             </div>
@@ -161,12 +159,12 @@ export default function Story() {
             </div>
           </div>
 
-          <a
+          <Link
             href="/#contact"
             className={`${antonio.className} inline-flex rounded-full border border-[#b7ff5a] px-10 py-2 text-sm font-semibold text-[#6aa800] transition hover:bg-[#b7ff5a] hover:text-black dark:text-[#b7ff5a]`}
           >
-            LET'S TALK
-          </a>
+            LET&apos;S TALK
+          </Link>
         </div>
       </div>
     </section>
