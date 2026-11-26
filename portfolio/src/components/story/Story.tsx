@@ -39,9 +39,9 @@ export default function Story() {
 
               <div className="mt-8 space-y-8">
                 <TimelineItem
-                  year="Now"
-                  title="Energy-aware ML systems + Knowledge Distillation"
-                  desc="I build reproducible KD pipelines, measure GPU/CPU power, and connect performance retention to energy-per-token. I like research that ships."
+                  year="Jul 2025 - Now"
+                  title="Research Assistant, DISCL at Texas Tech"
+                  desc="Energy-aware ML systems and knowledge distillation, plus keeping the REPACSS cluster running. I build reproducible KD pipelines, measure GPU/CPU power, and connect performance retention to energy-per-token. I like research that ships."
                 />
                 {/* <TimelineItem
                   year="2024-2025"

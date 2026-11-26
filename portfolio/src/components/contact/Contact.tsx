@@ -170,7 +170,14 @@ export default function Contact() {
               >
                 GitHub
               </a>
-              {/* TODO: add LinkedIn / Google Scholar URLs */}
+              <a
+                href="https://www.linkedin.com/in/batuhan-sencer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
 

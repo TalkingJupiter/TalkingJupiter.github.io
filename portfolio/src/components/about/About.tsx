@@ -23,10 +23,11 @@ export default function About() {
         </p>
 
         {/* Stats */}
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
-          <Stat value="0.5" label="Years of Experience" />
-          <Stat value="2" label="On Going Projects" />
-          <Stat value="1" label="Completed Projects" />
+        <div className="mt-14 grid grid-cols-2 gap-10 lg:grid-cols-4">
+          <Stat value="1+" label="Years in Research" />
+          <Stat value="2" label="Papers Under Review" />
+          <Stat value="4" label="Conference Roles" />
+          <Stat value="2" label="Competition Awards" />
         </div>
 
         
